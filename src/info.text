@@ -2,7 +2,10 @@
 Time: 28:20 Stop
 
 
-
+git pull origin main
+git add .
+git commit -m "Resolved merge conflicts"
+git push origin main
 
 
 

@@ -7,6 +7,11 @@ function Main() {
     <>
       <div className="container">
         <h1 className="title text-light">Quiz Application</h1>
+        {/* <p>
+          Welcome to the Web Designing exam. This exam covers fundamental
+          concepts of HTML and CSS. Please read each question carefully and
+          select the best answer. You have 40 minutes to complete this exam.
+        </p> */}
         <div className="All_info">
           <ol>
             <li>

@@ -18,6 +18,7 @@ function Quiz() {
         <h1 className="title text-light">Quiz Application</h1>
 
         {/* Display Questions */}
+
         <Questions />
 
         <div className="grid">
