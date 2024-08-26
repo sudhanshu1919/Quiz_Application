@@ -17,6 +17,7 @@ function Questions() {
 
   return (
     <Container>
+      {/* <Header>Quiz Application</Header> */}
       <QuestionWrapper>
         <QuestionTitle>{question.question}</QuestionTitle>
         <OptionsList key={question.id}>
@@ -46,17 +47,28 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: #181818;
   padding: 20px;
 `;
 
-const QuestionWrapper = styled.div`
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  max-width: 600px;
-  width: 100%;
+const Header = styled.h1`
+  color: #00ff00;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
   text-align: center;
-  background-color: #333; /* Adjust background color */
+  border-bottom: 2px solid #00ff00;
+  padding-bottom: 10px;
+  width: 100%;
+  max-width: 600px;
+`;
+
+const QuestionWrapper = styled.div`
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 `;
 
 const QuestionTitle = styled.h2`
@@ -71,11 +83,21 @@ const OptionsList = styled.ul`
 `;
 
 const OptionItem = styled.li`
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  background-color: #282828;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #333;
+  }
 `;
 
 const OptionInput = styled.input`
-  margin-right: 10px;
+  margin-right: 15px;
 `;
 
 const OptionLabel = styled.label`
@@ -84,6 +106,6 @@ const OptionLabel = styled.label`
   cursor: pointer;
 
   ${OptionInput}:checked + & {
-    color: #007bff;
+    color: #00ff00;
   }
 `;
