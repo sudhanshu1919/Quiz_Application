@@ -1,6 +1,10 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "../styles/App.css";
+
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import "bootstrap/dist/js/bootstrap.bundle.min"; // Import Bootstrap JS
+
 // import components
 import Main from "./Main";
 import Quiz from "../components/Quiz";

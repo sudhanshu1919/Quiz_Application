@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Questions from "./Questions";
+import { useSelector } from "react-redux";
 
 function Quiz() {
+  const question = useSelector((state) => state.questions); // Update this selector based on your Redux structure
+
+  useEffect(() => {
+    console.log(question);
+  }, [question]); // Add the question as a dependency
+
   // Next Button Event Handler
   function onNext() {
     console.log("next");
   }
 
-  // prev Button Event Handler
+  // Prev Button Event Handler
   function onPrev() {
     console.log("prev");
   }
