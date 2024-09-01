@@ -4,11 +4,11 @@ import Questions from "./Questions";
 import { useSelector } from "react-redux";
 
 function Quiz() {
-  const question = useSelector((state) => state.questions); // Update this selector based on your Redux structure
+  const state = useSelector((state) => state.questions); // Update this selector based on your Redux structure
 
   useEffect(() => {
-    console.log(question);
-  }, [question]); // Add the question as a dependency
+    console.log(state);
+  }, [state]); // Add the question as a dependency
 
   // Next Button Event Handler
   function onNext() {
@@ -41,12 +41,11 @@ function Quiz() {
 
 export default Quiz;
 
+// display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
 const QuizContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   background-color: #181818;
   padding: 20px;
 `;
@@ -67,7 +66,7 @@ const ButtonGrid = styled.div`
   justify-content: space-between;
   width: 100%;
   max-width: 600px;
-  margin-top: 20px;
+  margin-top: -250px;
 `;
 
 const Button = styled.button`

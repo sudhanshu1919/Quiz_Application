@@ -43,6 +43,7 @@ const Container = styled.div`
   align-items: center;
   min-height: 100vh;
   padding: 20px;
+  background-color: black;
 `;
 
 const Title = styled.h1`
@@ -103,6 +104,7 @@ const Input = styled.input`
   border: 1px solid #e3e3e3;
   border-radius: 5px;
   font-size: 1.2rem;
+  color: black;
 
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -130,6 +132,7 @@ const StyledLink = styled(Link)`
 
   &:hover {
     background-color: #0056b3;
+    color: white;
   }
 
   @media (max-width: 768px) {

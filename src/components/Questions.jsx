@@ -2,13 +2,20 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import data from "../Database/data";
 
+// Custom Hook
+
+import { useFetchQuestion } from "../hooks/FetchQuestion";
+
 function Questions() {
   const [checked, setChecked] = useState();
-
+  const [{ isLoading, apiData, serverError }] = useFetchQuestion();
   const question = data[0];
 
   useEffect(() => {
-    console.log(data);
+    // console.log(data);
+    // console.log(isLoading);
+    console.log(apiData);
+    // console.log(serverError);
   }, []); // Added empty dependency array to prevent infinite loop
 
   function onSelect() {
@@ -19,7 +26,7 @@ function Questions() {
     <Container>
       {/* <Header>Quiz Application</Header> */}
       <QuestionWrapper>
-        <QuestionTitle>{question.question}</QuestionTitle>
+        <QuestionTitle>1.{question.question}</QuestionTitle>
         <OptionsList key={question.id}>
           {question.options.map((q, i) => (
             <OptionItem key={i}>
@@ -40,14 +47,14 @@ function Questions() {
 }
 
 export default Questions;
-
+// display: flex;
+// flex-direction: column;
+// justify-content: center;
+//   align-items: center;
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   background-color: #181818;
+  line-height: 30px;
   padding: 20px;
 `;
 
@@ -63,7 +70,6 @@ const Header = styled.h1`
 `;
 
 const QuestionWrapper = styled.div`
-  background-color: #1e1e1e;
   padding: 30px;
   border-radius: 10px;
   width: 100%;
